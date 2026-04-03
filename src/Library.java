@@ -94,5 +94,23 @@ public class Library {
         System.out.println("Book issued succesfully to: "+member.getName());
     }
 
+    public void returnBook(int id){
+        Books book=null;
+
+        for(Books b:books)
+        {
+            if(b.getId()==id)
+            book=b;
+            break;
+        }
+        if(book==null)
+        {
+            System.out.println("Book not found ❌❌❌");
+            return;
+        }
+        book.returnBook();
+        System.out.println("Book returned Succesfully");
+    }
+
 
 }

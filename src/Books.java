@@ -42,6 +42,16 @@ public class Books {
         this.issueDate= LocalDate.now();
     }
 
+    public void returnBook() {
+       if(!issued)
+       {
+           System.out.println("Book is not issued ❌❌❌");
+       }
+        this.issued = false;
+        this.issuedTo = null;
+        this.issueDate = null;
+    }
+
 
     public String toString()
     {

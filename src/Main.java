@@ -15,7 +15,8 @@ public class Main{
             System.out.println("3. Add Member");
             System.out.println("4. Show members");
             System.out.println("5. Issue book");
-            System.out.println("6. Exit");
+            System.out.println("6. Return book");
+            System.out.println("7. Exit");
             System.out.print("Choose: ");
             choice = sc.nextInt();
 
@@ -65,9 +66,14 @@ public class Main{
                     int memberId=sc.nextInt();
                     library.issueBook(bookId,memberId);
                 }
-                case 6 -> System.out.println("Exiting....");
+                case 6 ->{
+                    System.out.println("Enter book id: ");
+                    int id=sc.nextInt();
+                    library.returnBook(id);
+                }
+                case 7 -> System.out.println("Exiting....");
                 default-> System.out.println("Enter the valid choice ❌❌❌");
             }
-        }while(choice!=6);
+        }while(choice!=7);
     }
 }
